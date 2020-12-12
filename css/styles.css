@@ -286,10 +286,11 @@ b {
   height: 100%;
   background-color: rgba(0, 0, 0, 0.2);
   opacity: 1;
-  transition: opacity 400ms ease-in-out;
+  visibility: visible;
+  transition: opacity 400ms ease-in-out, visibility 400ms ease-in-out;
 }
 .backdrop.is-hidden {
-  /* visibility: hidden; */
+  visibility: hidden;
   opacity: 0;
   pointer-events: none;
 }
@@ -522,13 +523,16 @@ b {
   text-align: center;
   letter-spacing: 0.03em;
   transition: color 250ms var(--timing-function),
-    background-color 250ms var(--timing-function);
+    background-color 250ms var(--timing-function),
+    box-shadow 250ms var(--timing-function);
 }
 .buttons:hover,
 .buttons:focus {
   background-color: var(--accent-color);
   color: var(--title-color);
   cursor: pointer;
+  box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08),
+    0px 2px 2px rgba(0, 0, 0, 0.12);
 }
 .list-buttons {
   display: flex;
